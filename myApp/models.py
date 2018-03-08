@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 from django.db import models
 
 # Create your models here.
-#创建模型类 模型类里的属性就是标、表的字段
+#创建模型类 模型类里的属性就是标、表的字段 以便后期实例化
 class Array(models.Model):
     array_id = models.CharField(max_length=50)
     array_name = models.CharField(max_length=20)
