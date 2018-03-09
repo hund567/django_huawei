@@ -16,8 +16,8 @@ class Array(models.Model):
     FREEDISKSCAPACITY = models.IntegerField()
     STORAGEPOOLCAPACITY= models.IntegerField()
     STORAGEPOOLFREECAPACITY = models.IntegerField()
-    def _str_(self):
-        return "%s"%(self.array_name)
+    def __str__(self):
+        return self.array_name
 class Server(models.Model):
     server_ID = models.IntegerField()
     server_name =models.CharField(max_length=50)
@@ -25,10 +25,13 @@ class Server(models.Model):
     server_wwn = models.CharField(max_length=100)
     #引入外键
     array_id = models.ForeignKey("Array")
-
+    def __str__(self):
+        return self.server_name
 class Lun(models.Model):
     lun_ID = models.CharField(max_length=50)
     lun_NAME = models.CharField(max_length=30)
     lun_CAPACITY = models.IntegerField()
     lun_WWN = models.CharField(max_length=20)
     server_ID = models.ForeignKey("Server")
+    def __str__(self):
+        return self.lun_NAME

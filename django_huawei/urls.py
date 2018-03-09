@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """django_huawei URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -13,9 +14,14 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from django.conf.urls import url,include
 from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    #下面这句话表示 如果我们什么都不添加，那么url就会指向myApp下的urls.py文件，在下面的文件中详细匹配视图
+    url(r'^',include('myApp.urls'))
 ]
+#  前面加r表示啥都匹配，不进行任何转义
+
+
