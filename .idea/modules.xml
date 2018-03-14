@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/django_huawei.iml" filepath="$PROJECT_DIR$/.idea/django_huawei.iml" />
+      <module fileurl="file://D:/huawei_manager/.idea/pythonenv.iml" filepath="D:/huawei_manager/.idea/pythonenv.iml" />
     </modules>
   </component>
 </project>
