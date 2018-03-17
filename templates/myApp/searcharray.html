@@ -1,0 +1,189 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查询存储信息</title>
+</head>
+{#   <script src="{% static 'js/echarts.min.js' %}"></script>#}
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'css/bootstrap-table.css' %}" rel="stylesheet">
+<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/bootstrap-table.js' %}"></script>
+<script src="{% static 'js/bootstrap-table-export.js' %}"></script>
+<script src="{% static 'js/FileSaver.min.js' %}"></script>
+<script src="{% static 'js/xlsx.core.min.js' %}"></script>
+<script src="{% static 'js/jspdf.min.js' %}"></script>
+<script src="{% static 'js/jspdf.plugin.autotable.js' %}"></script>
+<script src="{% static 'js/html2canvas.min.js' %}"></script>
+<script src="{% static 'js/tableExport.min.js' %}"></script>
+<script src="{% static 'js/bootstrap-table-toolbar.js' %}"></script>
+<script src="{% static 'js/bootstrap-table-multiple-search.js' %}"></script>
+
+
+
+
+
+
+
+
+
+
+
+<body>
+<div class="container-fluid">
+<nav class="navbar  navbar-fixed-top navba-no-bg navbar-inverse " style="background-color: #5e5e5e" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../array">GuanCong - Homepage</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="top-navbar-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a class="scroll-link" href="#">Top</a></li>
+                <li><a class="scroll-link" href="../array">磁盘机管理</a></li>
+                <li><a class="scroll-link" href="#">NBU管理</a></li>
+                <li><a class="scroll-link" href="#">About</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+
+<div class="col-md-12" style="margin-top: 20px; ">
+        <h1 class="page-header" ><i class="fa fa-cog fa-spin"></i>
+            <small>集中存储信息表</small>
+        </h1>
+        <div id="toolbar">
+            <button id="refresh_btn" type="button"  class="btn btn-success" onclick="refresh()">刷新信息
+            </button>
+            <button type="button" class="btn btn-info" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?" data-loading-text="loading...">导出全量数据
+            </button>
+            </select>
+        </div>
+
+        <div id="reportTableDiv">
+            <table id="reportTable" data-toolbar="#toolbar" data-show-export="true"  data-toggle="reportTable"></table>
+
+
+        </div>
+
+</div>
+<script>
+    function  refresh() {
+        $.ajax({
+        type : "get",
+        url: '../initdb',
+         success: function (msg) {
+             //数据成功返回时执行次回调函数
+             alert('更新数据成功');
+         }
+});
+        
+    }
+</script>
+
+
+
+
+
+<script type="text/javascript">
+    $(function () {
+        $('#toolbar').find('select').change(function () {
+            $table.bootstrapTable('refreshOptions', {
+                exportDataType: $(this).val()
+            });
+        });
+
+
+
+
+        $('#reportTable').bootstrapTable({
+            method: 'get',
+            url: "/get/tabjson",
+            cache: false,
+            height: 800,
+            striped: true,
+            pagination: true,
+            pageSize: 20,
+            pageNumber: 1,
+            pageList: [10, 20, 50, 100, 200, 500,1000],
+            sidePagination: 'client',
+            search:true,
+            showColumns: true,
+            showExport:true,
+            exportTypes: ['json','xml','csv','txt','pdf'],
+            showRefresh:true,
+            trimOnSearch:true,
+            buttonsAlign:'right',
+            maintainSelected:true,
+            clickToSelect: true,
+            exportDataType: 'selected',
+            Icons:'glyphicon-export',//导出文件图标
+            toolbarAlign: 'left',//toolbar位置
+            toolbar:"#toolbar",
+            advancedSearch:true,
+            idTable:'table1',
+            idForm:'advancedSearch',
+
+
+            columns: [
+                {field: "checked", checkbox : true},
+                {field: "array_name", title: "归属磁盘机名", align: "center", valign: "middle",sortable: "true",
+                    },
+                {field: "location", title: "盘机位置", align: "center", valign: "middle", sortable: "true",
+                    formatter: function (value) {
+                    if (value =="主机房")
+                    {return "<span class='badge bg-orange'  style='padding:5px 10px;background-color: #e38d13'>" + value + "</span>";}
+                    else
+                    {return "<span class='badge'  style='padding:5px 10px;'>" + value + "</span>";}
+      }},
+                {field: "array_ip", title: "盘机IP", align: "center", valign: "middle", sortable: "true"},
+                {field: "server_IP", title: "归属主机IP", align: "center", valign: "middle", sortable: "true"},
+                {field: "server_wwn", title: "主机wwn", align: "center", valign: "middle", sortable: "true"},
+                {field: "lun_NAME", title: "lun名称", align: "center", valign: "middle", sortable: "true"},
+                {field: "lun_CAPACITY", title: "lun大小", align: "center", valign: "middle", sortable: "true"},
+                {field: "server_name", title: "归属主机名", align: "center", valign: "middle", sortable: "true"},
+                {field: "lun_WWN", title: "lun_WWN", align: "center", valign: "middle", sortable: "true"},
+
+
+            ],
+
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    var differentindex = 999;
+    $(document).ready(function(){
+
+        $("#refresh_btn").hover(function() {
+            openMsg();
+        }, function() {
+            layer.close(differentindex);
+        });
+    });
+    function openMsg() {
+        differentindex = layer.tips('点击分类内容项，可查看下一级机构账户统计情况', '.name', {
+          tips: [1, '#3595CC'],
+          time: 30000
+        });
+    }
+</script>
+
+
+
+
+
+
+</body>
+</html>

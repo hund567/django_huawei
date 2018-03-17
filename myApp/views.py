@@ -8,6 +8,9 @@ import requests
 import urllib, urllib2, json
 import cookielib
 import ssl
+import pymysql
+import sys,shelve
+import json
 
 # Create your views here.
 def index(request):
@@ -16,7 +19,23 @@ def index(request):
 def detail(request,num,num2):
     return HttpResponse("detail-%s-%s"%(num,num2))
 
-def inirdb():
+def initdb(request):
+    #首先清除所有信息
+    conn = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd='root', db='managedb', charset='utf8')
+    cursor = conn.cursor()
+
+    cursor.execute(
+        "delete from myapp_lun")
+    cursor.execute(
+        "delete from myapp_server")
+    cursor.execute(
+        "delete from myapp_array")
+    conn.commit()
+    cursor.close()
+    conn.close()
+
+
+
     Arrays_list = [['93.1.243.31', '2102350BVB10H8000046', 'admin', 'Admin@storage'],
                    ['93.1.243.25', '2102350HYS10H8000042', 'admin', 'Admin@storage'],
                    ['93.1.243.63', '2102350DJX10G8000002', 'admin', 'Admin@storage'],
@@ -119,7 +138,7 @@ def inirdb():
 
             #主机信息入库
             server_in_view = Server()
-            server_in_view.array_id = array_id
+            server_in_view.array_id = Array_in_view
             server_in_view.server_ID = server_ID
             server_in_view.server_IP = server_IP
             server_in_view.server_name = server_name
@@ -151,7 +170,7 @@ def inirdb():
                 #lun信息入库
 
                 lun_in_view = Lun()
-                lun_in_view.server_ID = server_ID
+                lun_in_view.server_ID = server_in_view
                 lun_in_view.lun_ID = each['ID']
                 lun_in_view.lun_NAME = each['NAME']
                 lun_in_view.lun_CAPACITY = each['CAPACITY']
@@ -182,19 +201,74 @@ def inirdb():
 
     for each_array in Arrays_list:
         func(each_array[0],each_array[1],each_array[2],each_array[3])
-    return
+    return render(request,'myApp/array.html')
 
 
 
 
 
 
-def server(request):
+def array(request):
     #去models里取数据
-    inirdb()
+    # inirdb()
     serverlist = Server.objects.all()
     lunlist = Lun.objects.all()
+    arraylist = Array.objects.all()
     #将数据传递給模板，模板渲染页面，然后将渲染好的页面传递给浏览器
-    return render(request,'myApp/server.html',{"serer_in_tem":serverlist},{"lun_in_tem":lunlist})
+    return render(request,'myApp/array.html',{"server_in_tem":serverlist,"lun_in_tem":lunlist,"array_in_tem":arraylist})
     #传递给模板的是一个字典，字典的key就是html中的输入值，value就是上面我们从model中取回的数据
     pass
+
+
+
+def searcharray(request):
+    #去models里取数据
+    # inirdb()
+    #将数据传递給模板，模板渲染页面，然后将渲染好的页面传递给浏览器
+
+    # 传递给模板的是一个字典，字典的key就是html中的输入值，value就是上面我们从model中取回的数据
+    return render(request,'myApp/searcharray.html')
+    pass
+
+
+
+def getjson(request):
+
+
+    # 处理收集的数据信息　编辑成一条数据
+    conn = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd='root', db='managedb', charset='utf8')
+    cursor = conn.cursor()
+    cursor.execute(
+        "SELECT t1.lun_id,t1.lun_NAME,t1.lun_CAPACITY,t1.lun_WWN,t2.server_ID,t2.server_name,t2.server_IP,t2.server_wwn,t3.array_name,t3.location,t3.array_ip FROM myapp_lun t1,myapp_server t2,myapp_array t3 WHERE t1.server_ID_id = t2.id AND t2.array_id_id = t3.id ")
+    effect_lun_row = cursor.fetchall()
+    conn.close()
+    resdict = {}
+    rowlist = []
+    for row in effect_lun_row:
+        rowdict = {}
+        rowdict['id'] = row[0]
+        rowdict['lun_NAME'] = row[1]
+        rowdict['lun_CAPACITY'] = row[2]/1024/1024/2
+        rowdict['lun_WWN'] = row[3]
+        rowdict['server_ID'] = row[4]
+        rowdict['server_name'] = row[5]
+        rowdict['server_IP'] = row[6]
+        aa = row[7]
+        bb=aa.replace('[u\'','')
+        cc=bb.replace('\']','')
+        dd=cc.replace("\',",'')
+        ee = dd.replace("u\'", '\n')
+        rowdict['server_wwn'] = ee
+        rowdict['array_name'] = row[8]
+        rowdict['location'] = row[9]
+        rowdict['array_ip'] = row[10]
+        rowlist.append(rowdict)
+    resdict['total'] = len(rowlist)
+    resdict['data'] = rowlist
+
+    # return HttpResponse(resdict.get('total', 'failure'))
+    # return HttpResponse(resdict.get('data', 'failure'))
+
+    from django.http import JsonResponse
+    return JsonResponse(resdict)
+
