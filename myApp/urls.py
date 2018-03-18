@@ -13,5 +13,8 @@ urlpatterns = [
     url(r'^searcharray/$',views.searcharray),
     url(r'^get/tabjson/$',views.getjson),
     url(r'^initdb/$',views.initdb),
+    url(r'^inputarrayinfo/$',views.inputarrayinfo),
+    url(r'^submit_array_info$',views.submit_array_info),
+
 
 ]

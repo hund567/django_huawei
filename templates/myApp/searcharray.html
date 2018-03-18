@@ -48,7 +48,7 @@
         <div class="collapse navbar-collapse" id="top-navbar-1">
             <ul class="nav navbar-nav navbar-right">
                 <li><a class="scroll-link" href="#">Top</a></li>
-                <li><a class="scroll-link" href="../array">磁盘机管理</a></li>
+                <li ><a class="scroll-link" href="../array" >磁盘机管理</a></li>
                 <li><a class="scroll-link" href="#">NBU管理</a></li>
                 <li><a class="scroll-link" href="#">About</a></li>
             </ul>
@@ -59,44 +59,44 @@
 
 
 
-<div class="col-md-12" style="margin-top: 20px; ">
-        <h1 class="page-header" ><i class="fa fa-cog fa-spin"></i>
-            <small>集中存储信息表</small>
-        </h1>
-        <div id="toolbar">
-            <button id="refresh_btn" type="button"  class="btn btn-success" onclick="refresh()">刷新信息
-            </button>
-            <button type="button" class="btn btn-info" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?" data-loading-text="loading...">导出全量数据
-            </button>
-            </select>
-        </div>
+<div class="panel panel-default " style="border-style:none;margin-top: 70px;margin-right: 0px;margin-left: 10px; width:100%" >
+        <div id="" class="row">
+            <div class="col-md-1 col-lg-1 col-sm-1 " style="height: 100%" >
+                <ul class="nav nav-pills nav-stacked clearfix" style="width:100%; ">
 
-        <div id="reportTableDiv">
-            <table id="reportTable" data-toolbar="#toolbar" data-show-export="true"  data-toggle="reportTable"></table>
+                    <li class="scroll-link"><a  href="../array" style="font-size: 0.75pc;font-family: 幼圆;width:100%">盘机详情</a></li>
+                    <li class="active"><a  href="../searcharray" style="font-size: 0.75em;font-family: 幼圆" >查询</a></li>
+                    <li ><a class="scroll-link" href="../inputarrayinfo"  style="font-size: 0.75em;font-family: 幼圆" >信息录入</a></li>
+                    <li><a class="scroll-link" href=""  style="font-size: 0.75em;font-family: 幼圆" >表格导出</a></li>
 
 
-        </div>
+                </ul>
+            </div>
+                <div class="col-md-11 col-lg-11 col-sm-11" align="right" style="height: 60px">
+                <div id="toolbar">
+                    <button id="refresh_btn" type="button"  class="btn btn-success" onclick="refresh()">刷新信息
+                    </button>
+                    <button type="button" class="btn btn-info" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?" data-loading-text="loading...">导出全量数据
+                    </button>
+                </div>
 
-</div>
-<script>
-    function  refresh() {
-        $.ajax({
-        type : "get",
-        url: '../initdb',
-         success: function (msg) {
-             //数据成功返回时执行次回调函数
-             alert('更新数据成功');
-         }
-});
-        
-    }
-</script>
+                <div id="reportTableDiv" >
+                <table id="reportTable" data-toolbar="#toolbar" data-show-export="true"  data-toggle="reportTable"></table>
+                <script>
+                function  refresh() {
+                    $.ajax({
+                    type : "get",
+                    url: '../initdb',
+                     success: function (msg) {
+                         //数据成功返回时执行次回调函数
+                         alert('更新数据成功');
+                     }
+                        });
 
+                                    }
+                 </script>
 
-
-
-
-<script type="text/javascript">
+                <script type="text/javascript">
     $(function () {
         $('#toolbar').find('select').change(function () {
             $table.bootstrapTable('refreshOptions', {
@@ -162,28 +162,58 @@
     });
 </script>
 
-<script type="text/javascript">
-    var differentindex = 999;
-    $(document).ready(function(){
-
-        $("#refresh_btn").hover(function() {
-            openMsg();
-        }, function() {
-            layer.close(differentindex);
-        });
-    });
-    function openMsg() {
-        differentindex = layer.tips('点击分类内容项，可查看下一级机构账户统计情况', '.name', {
-          tips: [1, '#3595CC'],
-          time: 30000
-        });
-    }
-</script>
+                </div>
+                </div>
 
 
 
 
 
+{#<div class="col-md-12" style="margin-top: 20px; ">#}
+{#        <h1 class="page-header" ><i class="fa fa-cog fa-spin"></i>#}
+{#            <small>集中存储信息表</small>#}
+{#        </h1>#}
+{#        <div id="toolbar">#}
+{#            <button id="refresh_btn" type="button"  class="btn btn-success" onclick="refresh()">刷新信息#}
+{#            </button>#}
+{#            <button type="button" class="btn btn-info" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?" data-loading-text="loading...">导出全量数据#}
+{#            </button>#}
+{#            </select>#}
+{#        </div>#}
+{##}
+{#        <div id="reportTableDiv">#}
+{#            <table id="reportTable" data-toolbar="#toolbar" data-show-export="true"  data-toggle="reportTable"></table>#}
+{##}
+{##}
+{#        </div>#}
 
+</div>
+{#<script>#}
+{#    function  refresh() {#}
+{#        $.ajax({#}
+{#        type : "get",#}
+{#        url: '../initdb',#}
+{#         success: function (msg) {#}
+{#             //数据成功返回时执行次回调函数#}
+{#             alert('更新数据成功');#}
+{#         }#}
+{#});#}
+{#        #}
+{#    }#}
+{#</script>#}
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
 </body>
 </html>

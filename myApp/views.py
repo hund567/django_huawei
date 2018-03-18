@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 from .models import Server,Array,Lun
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.template import RequestContext
 
 import requests
 import urllib, urllib2, json
@@ -31,6 +32,9 @@ def initdb(request):
     cursor.execute(
         "delete from myapp_array")
     conn.commit()
+    Arrays_list=[]
+
+
     cursor.close()
     conn.close()
 
@@ -204,10 +208,6 @@ def initdb(request):
     return render(request,'myApp/array.html')
 
 
-
-
-
-
 def array(request):
     #去models里取数据
     # inirdb()
@@ -219,8 +219,6 @@ def array(request):
     #传递给模板的是一个字典，字典的key就是html中的输入值，value就是上面我们从model中取回的数据
     pass
 
-
-
 def searcharray(request):
     #去models里取数据
     # inirdb()
@@ -229,8 +227,6 @@ def searcharray(request):
     # 传递给模板的是一个字典，字典的key就是html中的输入值，value就是上面我们从model中取回的数据
     return render(request,'myApp/searcharray.html')
     pass
-
-
 
 def getjson(request):
 
@@ -272,3 +268,25 @@ def getjson(request):
     from django.http import JsonResponse
     return JsonResponse(resdict)
 
+def inputarrayinfo(request):
+    return render(request, 'myApp/inputarrayinfo.html')
+
+def submit_array_info(request):
+
+    array_auth_info=json.load(request)
+
+    conn = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd='root', db='managedb', charset='utf8')
+    cursor = conn.cursor()
+
+    cursor.execute(
+        "select * from myapp_array_admin where array_ip = %s",(array_auth_info['array_ip']))
+
+    if cursor.rowcount == 0:
+        cursor.execute("insert into myapp_array_admin(array_ip,array_user,array_password) values(%s,%s,%s)",(array_auth_info['array_ip'],array_auth_info['array_user'],array_auth_info['array_password']))
+        resp="新增数据成功"
+    else:
+        cursor.execute("update myapp_array_admin set array_user=%s,array_password = %s where array_ip =%s",(array_auth_info['array_user'],array_auth_info['array_password'],array_auth_info['array_ip']))
+        resp="更新数据成功"
+    conn.commit()
+    conn.close()
+    return HttpResponse(resp)

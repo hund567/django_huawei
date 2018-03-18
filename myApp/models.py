@@ -35,3 +35,11 @@ class Lun(models.Model):
     server_ID = models.ForeignKey("Server")
     def __str__(self):
         return self.lun_NAME
+
+
+class Array_Amdin(models.Model):
+    array_ip = models.CharField(max_length=30)
+    array_user = models.CharField(max_length=30)
+    array_password = models.CharField(max_length=30)
+    def __str__(self):
+        return self.array_ip

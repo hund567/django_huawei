@@ -1,0 +1,183 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盘机信息录入</title>
+    <script src="{% static 'js/echarts.min.js' %}"></script>
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/mycss.css' %}" rel="stylesheet">
+    <script type="text/javascript">
+
+                function clicktosubmit() {
+                            //  前台传递crsf至后台  在使用ajax和post方法时需加入这一段
+                                        jQuery(document).ajaxSend(function(event, xhr, settings) {
+                                        function getCookie(name) {
+                                            var cookieValue = null;
+                                            if (document.cookie && document.cookie != '') {
+                                                var cookies = document.cookie.split(';');
+                                                for (var i = 0; i < cookies.length; i++) {
+                                                    var cookie = jQuery.trim(cookies[i]);
+                                                    // Does this cookie string begin with the name we want?
+                                                    if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                                                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                                                        break;
+                                                    }
+                                                }
+                                            }
+                                            return cookieValue;
+                                        }
+                                        function sameOrigin(url) {
+                                            // url could be relative or scheme relative or absolute
+                                            var host = document.location.host; // host + port
+                                            var protocol = document.location.protocol;
+                                            var sr_origin = '//' + host;
+                                            var origin = protocol + sr_origin;
+                                            // Allow absolute or scheme relative URLs to same origin
+                                            return (url == origin || url.slice(0, origin.length + 1) == origin + '/') ||
+                                                (url == sr_origin || url.slice(0, sr_origin.length + 1) == sr_origin + '/') ||
+                                                // or any other URL that isn't scheme relative or absolute i.e relative.
+                                                !(/^(\/\/|http:|https:).*/.test(url));
+                                        }
+                                        function safeMethod(method) {
+                                            return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+                                        }
+
+                                        if (!safeMethod(settings.type) && sameOrigin(settings.url)) {
+                                            xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));
+                                        }
+                                    });
+
+                                        //这里才正式启用ajax
+                    var ip1 = document.getElementById('array_ip').value;
+                    var user1 = document.getElementById('array_user').value;
+                    var password1 = document.getElementById('array_password').value;
+                    var type1=typeof(ip1);
+                    var data1={"array_ip":ip1 ,"array_user":user1,"array_password":password1};
+
+
+                                    $.ajax({
+                                    //几个参数需要注意一下
+                                        type: "POST",//方法类型
+                                        {#dataType: "text",//预期服务器返回的数据类型#}
+                                        data: JSON.stringify({
+                                                    array_ip:ip1,
+                                                    array_user: user1,
+                                                    array_password: password1// 注意不要在此行增加逗号
+
+                                                                  }),
+                                        url: "../submit_array_info",
+                                        contentType: "application/json; charset=utf-8",
+                                        success: function (resp) {
+
+                                                    alert(resp);
+                                            console.log(resp);//打印服务端返回的数据(调试用)
+                                                                            if (resp.resultCode == 200) {
+                                                                                alert("SUCCESS");};
+
+                                                                    },
+                                                                                     error : function(resp) {
+
+                                                                                                    alert(resp);}
+                                                                    });
+                                     }
+
+            </script>
+</head>
+<body>
+<nav class="navbar  navbar-fixed-top navba-no-bg navbar-inverse " style="background-color: #5e5e5e" role="navigation">
+    <div class="container" >
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../array">GuanCong - Homepage</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="top-navbar-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a class="scroll-link" href="#">Top</a></li>
+                <li><a class="scroll-link" href="../array">磁盘机管理</a></li>
+                <li><a class="scroll-link" href="#">NBU管理</a></li>
+                <li><a class="scroll-link" href="#">About</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="panel panel-default " style="border-style:none;margin-top: 70px;margin-right: 0px;margin-left: 10px; width:100%" >
+        <div id="" class="row">
+            <div class="col-md-1 col-lg-1 col-sm-1 " style="height: 100%" >
+                <ul class="nav nav-pills nav-stacked clearfix" style="width:100%; ">
+
+                    <li ><a  href="../array" style="font-size: 0.75pc;font-family: 幼圆;width:100%">盘机详情</a></li>
+                    <li><a class="scroll-link" href="../searcharray" style="font-size: 0.75em;font-family: 幼圆" >查询</a></li>
+
+                    <li class="active"><a class="scroll-link" href="../inputarrayinfo"  style="font-size: 0.75em;font-family: 幼圆" >信息录入</a></li>
+                    <li><a class="scroll-link" href=""  style="font-size: 0.75em;font-family: 幼圆" >表格导出</a></li>
+                </ul>
+            </div>
+
+
+        <!-- 右侧内容展示================================================== -->
+        <div class="col-lg-10 col-sm-10 col-md-10">
+                <form role="form" id="form1" >
+
+                <div class="form-group">
+                    <div class="container-fluid">
+                    <div class="container" style="text-align: left"><label for="name" style="text-align: left ;font-size:1.5em">存储设备信息录入:</label></div>
+                    <br>
+
+                    <input type="text" class="form-control" id="array_ip"
+                            {#这里设置只能输入数字和英文的点#}
+                           placeholder="请输入设备IP"  style="width:30%" onkeyup="this.value=value.replace(/[^\d|.]/g,'');if(this.value=='')(this.value='');">
+                     <br>
+
+
+
+                    <input type="text" class="form-control" id="array_user"
+                           placeholder="请输入设备用户名" style="width:30%">
+                     <br>
+
+
+
+                    <input type="text" class="form-control" id="array_password"
+                           placeholder="请输入设备密码" style="width:30%">
+                     <br>
+
+
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-default btn-success" style="margin-left: 15px" onclick="clicktosubmit()">提交</button>
+
+            </form>
+
+            </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+</body>
+</html>
