@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-from .models import Server,Array,Lun
+from .models import Server,Array,Lun,Array_Admin
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import RequestContext
@@ -33,8 +33,9 @@ def initdb(request):
         "delete from myapp_array")
     conn.commit()
     Arrays_list=[]
-
-
+    querys = (x for x in Array_Admin.objects.all())
+    for query in querys:
+        Arrays_list.append(query)
     cursor.close()
     conn.close()
 
@@ -42,7 +43,6 @@ def initdb(request):
 
     Arrays_list = [['93.1.243.31', '2102350BVB10H8000046', 'admin', 'Admin@storage'],
                    ['93.1.243.25', '2102350HYS10H8000042', 'admin', 'Admin@storage'],
-                   ['93.1.243.63', '2102350DJX10G8000002', 'admin', 'Admin@storage'],
                    ['93.1.243.63', '2102350DJX10G8000002', 'admin', 'Admin@storage'],
                    ['93.1.243.61', '2102350BVB10F6000042', 'admin', 'Admin@storage'],
                    ['93.225.115.54', '2102350BVB10F6000041', 'admin', 'admin@Storage']]
@@ -204,6 +204,7 @@ def initdb(request):
 
 
     for each_array in Arrays_list:
+        #array_ip, array_id, array_user, array_passwd
         func(each_array[0],each_array[1],each_array[2],each_array[3])
     return render(request,'myApp/array.html')
 
@@ -282,11 +283,14 @@ def submit_array_info(request):
         "select * from myapp_array_admin where array_ip = %s",(array_auth_info['array_ip']))
 
     if cursor.rowcount == 0:
-        cursor.execute("insert into myapp_array_admin(array_ip,array_user,array_password) values(%s,%s,%s)",(array_auth_info['array_ip'],array_auth_info['array_user'],array_auth_info['array_password']))
+        cursor.execute("insert into myapp_array_admin(array_ip,array_user,array_password,array_id) values(%s,%s,%s,%s)",(array_auth_info['array_ip'],array_auth_info['array_user'],array_auth_info['array_password'],array_auth_info['array_id']))
         resp="新增数据成功"
     else:
-        cursor.execute("update myapp_array_admin set array_user=%s,array_password = %s where array_ip =%s",(array_auth_info['array_user'],array_auth_info['array_password'],array_auth_info['array_ip']))
+        cursor.execute("update myapp_array_admin set array_user=%s,array_password = %s ,array_id = %s where array_ip =%s",(array_auth_info['array_user'],array_auth_info['array_password'],array_auth_info['array_id'],array_auth_info['array_ip']))
         resp="更新数据成功"
     conn.commit()
     conn.close()
     return HttpResponse(resp)
+
+
+#表单导出

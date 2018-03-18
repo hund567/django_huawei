@@ -56,9 +56,7 @@
                     var ip1 = document.getElementById('array_ip').value;
                     var user1 = document.getElementById('array_user').value;
                     var password1 = document.getElementById('array_password').value;
-                    var type1=typeof(ip1);
-                    var data1={"array_ip":ip1 ,"array_user":user1,"array_password":password1};
-
+                    var id1 = document.getElementById('array_id').value;
 
                                     $.ajax({
                                     //几个参数需要注意一下
@@ -67,6 +65,7 @@
                                         data: JSON.stringify({
                                                     array_ip:ip1,
                                                     array_user: user1,
+                                                    array_id: id1,
                                                     array_password: password1// 注意不要在此行增加逗号
 
                                                                   }),
@@ -120,6 +119,7 @@
                     <li><a class="scroll-link" href="../searcharray" style="font-size: 0.75em;font-family: 幼圆" >查询</a></li>
 
                     <li class="active"><a class="scroll-link" href="../inputarrayinfo"  style="font-size: 0.75em;font-family: 幼圆" >信息录入</a></li>
+                    <li><a class="scroll-link" href="../initdb"  style="font-size: 0.75em;font-family: 幼圆" >信息更新</a></li>
                     <li><a class="scroll-link" href=""  style="font-size: 0.75em;font-family: 幼圆" >表格导出</a></li>
                 </ul>
             </div>
@@ -134,20 +134,25 @@
                     <div class="container" style="text-align: left"><label for="name" style="text-align: left ;font-size:1.5em">存储设备信息录入:</label></div>
                     <br>
 
-                    <input type="text" class="form-control" id="array_ip"
+                    <input type="text" class="form-control" id="array_ip" required
                             {#这里设置只能输入数字和英文的点#}
                            placeholder="请输入设备IP"  style="width:30%" onkeyup="this.value=value.replace(/[^\d|.]/g,'');if(this.value=='')(this.value='');">
                      <br>
 
 
+                    <input type="text" class="form-control" id="array_id" required
+                             placeholder="请输入设备ID" style="width:30%">
+                        <br/>
 
-                    <input type="text" class="form-control" id="array_user"
+
+
+                    <input type="text" class="form-control" id="array_user" required
                            placeholder="请输入设备用户名" style="width:30%">
                      <br>
 
 
 
-                    <input type="text" class="form-control" id="array_password"
+                    <input type="text" class="form-control" id="array_password" required
                            placeholder="请输入设备密码" style="width:30%">
                      <br>
 

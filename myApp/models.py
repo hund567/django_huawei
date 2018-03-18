@@ -37,9 +37,11 @@ class Lun(models.Model):
         return self.lun_NAME
 
 
-class Array_Amdin(models.Model):
+class Array_Admin(models.Model):
     array_ip = models.CharField(max_length=30)
+    array_id = models.CharField(max_length=30)
     array_user = models.CharField(max_length=30)
     array_password = models.CharField(max_length=30)
+
     def __str__(self):
         return self.array_ip
