@@ -2,32 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de397707-0fa4-44e8-a22c-8b4297147b39" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/css/mycss.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/FileSaver.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/bootstrap-table-export.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/bootstrap-table-multiple-search.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/bootstrap-table-toolbar.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/bootstrap-table.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/bootstrap-table.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/bootstrap-table.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/html2canvas.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/jspdf.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/jspdf.plugin.autotable.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/mirza_fonts.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/pdfmake.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/tableExport.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/tableExport.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/xlsx.core.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/myApp/array.html" />
-      <change beforePath="$PROJECT_DIR$/django_huawei/settings.py" afterPath="$PROJECT_DIR$/django_huawei/settings.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/webServers.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/myApp/array_info_collect.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/myApp/crontab.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/myApp/nbu_collect.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/myApp/nbu_collect_info.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/layer.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/theme/icon-ext.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/theme/icon.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/theme/layer.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/theme/loading-0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/theme/loading-1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/theme/loading-2.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/theme/mycss.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/myApp/base.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/myApp/header.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/myApp/nbuview.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/myApp/nbuview_monthly.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/myApp/nbuview_weekly.html" />
+      <change beforePath="$PROJECT_DIR$/.idea/django_huawei.iml" afterPath="$PROJECT_DIR$/.idea/django_huawei.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/myApp/urls.py" afterPath="$PROJECT_DIR$/myApp/urls.py" />
       <change beforePath="$PROJECT_DIR$/myApp/views.py" afterPath="$PROJECT_DIR$/myApp/views.py" />
-      <change beforePath="$PROJECT_DIR$/templates/myApp/server.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/css/mycss.css" afterPath="$PROJECT_DIR$/static/css/mycss.css" />
+      <change beforePath="$PROJECT_DIR$/templates/myApp/array.html" afterPath="$PROJECT_DIR$/templates/myApp/array.html" />
+      <change beforePath="$PROJECT_DIR$/templates/myApp/inputarrayinfo.html" afterPath="$PROJECT_DIR$/templates/myApp/inputarrayinfo.html" />
+      <change beforePath="$PROJECT_DIR$/templates/myApp/searcharray.html" afterPath="$PROJECT_DIR$/templates/myApp/searcharray.html" />
+      <change beforePath="$PROJECT_DIR$/templates/myApp/test.py" afterPath="$PROJECT_DIR$/templates/myApp/test.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,62 +43,112 @@
     <SUITE FILE_PATH="coverage/django_huawei$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1521183236261" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/templates/myApp" />
     <SUITE FILE_PATH="coverage/django_huawei$manage.coverage" NAME="manage Coverage Results" MODIFIED="1521085066514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/django_huawei$test001.coverage" NAME="test001 Coverage Results" MODIFIED="1521183366270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/templates/myApp" />
-    <SUITE FILE_PATH="coverage/django_huawei$test.coverage" NAME="test Coverage Results" MODIFIED="1520498052287" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/django_huawei" />
+    <SUITE FILE_PATH="coverage/django_huawei$nbu_collect_info.coverage" NAME="nbu_collect_info Coverage Results" MODIFIED="1521449565230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/myApp" />
+    <SUITE FILE_PATH="coverage/django_huawei$nbu_collect.coverage" NAME="nbu_collect Coverage Results" MODIFIED="1521789700000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/remote_project" />
+    <SUITE FILE_PATH="coverage/django_huawei$test.coverage" NAME="test Coverage Results" MODIFIED="1521922563237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/templates/myApp" />
+    <SUITE FILE_PATH="coverage/django_huawei$crontab.coverage" NAME="crontab Coverage Results" MODIFIED="1521445839056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/templates/myApp" />
+    <SUITE FILE_PATH="coverage/django_huawei$nbu_collect__1_.coverage" NAME="nbu_collect (1) Coverage Results" MODIFIED="1521922652724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/myApp" />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="array.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/myApp/array.html">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myApp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="53" column="123" lean-forward="false" selection-start-line="53" selection-start-column="123" selection-end-line="53" selection-end-column="123" />
+            <state relative-caret-position="283">
+              <caret line="470" column="15" lean-forward="false" selection-start-line="470" selection-start-column="15" selection-end-line="470" selection-end-column="15" />
               <folding>
-                <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#24#63#0" expanded="true" />
+                <marker date="1521922328173" expanded="true" signature="890:911" ph="delete from myapp_lun... " />
+                <marker date="1521922328173" expanded="true" signature="943:967" ph="delete from myapp_server... " />
+                <marker date="1521922328173" expanded="true" signature="999:1022" ph="delete from myapp_array... " />
+                <marker date="1521922328173" expanded="true" signature="9198:9464" ph="SELECT t1.lu... myapp_lun" />
+                <marker date="1521922328173" expanded="true" signature="10847:10898" ph="select * fro... myapp_array_admin" />
+                <marker date="1521922328173" expanded="true" signature="10985:11079" ph="insert into myapp_array_admin... " />
+                <marker date="1521922328173" expanded="true" signature="11260:11356" ph="update myapp_array_admin... " />
+                <marker date="1521922328173" expanded="true" signature="12033:12084" ph="select disti... myapp_nbu_jobinfo" />
+                <marker date="1521922328173" expanded="true" signature="12369:12398" ph="select * fro... myapp_nbu_daily" />
+                <marker date="1521922328173" expanded="true" signature="12369:12422" ph="select * fro... myapp_nbu_daily" />
+                <marker date="1521922328173" expanded="true" signature="13016:13047" ph="select * fro... myapp_nbu_library" />
+                <marker date="1521922328173" expanded="true" signature="13654:13705" ph="select disti... myapp_nbu_jobinfo" />
+                <marker date="1521922328173" expanded="true" signature="14123:14195" ph="select * fro... myapp_nbu_week_all" />
+                <marker date="1521922328173" expanded="true" signature="14876:14907" ph="select * fro... myapp_nbu_library" />
+                <marker date="1521922328173" expanded="true" signature="15403:15454" ph="select disti... myapp_nbu_jobinfo" />
+                <marker date="1521922328173" expanded="true" signature="15875:15944" ph="select * fro... myapp_nbu_monthly" />
+                <marker date="1521922328173" expanded="true" signature="16625:16656" ph="select * fro... myapp_nbu_library" />
+                <marker date="1521922328173" expanded="true" signature="17407:17444" ph="select disti... myapp_nbu_jobinfo" />
+                <marker date="1521922328173" expanded="true" signature="17407:17449" ph="select polic... myapp_nbu_jobinfo" />
+                <marker date="1521922328173" expanded="true" signature="17407:17476" ph="select polic... myapp_nbu_jobinfo" />
+                <marker date="1521922328173" expanded="true" signature="17407:17505" ph="select polic... myapp_nbu_jobinfo" />
+                <marker date="1521922328173" expanded="true" signature="18267:18315" ph="select polic... myapp_nbu_time" />
+                <marker date="1521922328173" expanded="true" signature="18267:18333" ph="select polic... myapp_nbu_time" />
+                <marker date="1521922328173" expanded="true" signature="18267:18335" ph="select polic... myapp_nbu_time" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="array_management.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/myApp/array_management.html">
+      <file leaf-file-name="nbu_collect.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myApp/nbu_collect.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="709">
-              <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="searcharray.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/myApp/searcharray.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="160" column="5" lean-forward="false" selection-start-line="160" selection-start-column="5" selection-end-line="160" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myApp/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="213" column="31" lean-forward="false" selection-start-line="213" selection-start-column="24" selection-end-line="213" selection-end-column="31" />
+            <state relative-caret-position="186">
+              <caret line="104" column="72" lean-forward="false" selection-start-line="104" selection-start-column="72" selection-end-line="104" selection-end-column="72" />
               <folding>
-                <marker date="1521228864930" expanded="true" signature="670:691" ph="delete from myapp_lun... " />
-                <marker date="1521228864930" expanded="true" signature="676:691" ph="delete from myapp_lun" />
-                <marker date="1521228864930" expanded="true" signature="723:747" ph="delete from myapp_server... " />
-                <marker date="1521228864930" expanded="true" signature="779:802" ph="delete from myapp_array... " />
-                <marker date="1521228864930" expanded="true" signature="8876:9130" ph="SELECT t1.lu... myapp_lun" />
+                <element signature="e#24#33#0" expanded="true" />
+                <marker date="1521922521303" expanded="true" signature="1600:1654" ph="select count... myapp_nbu_jobinfo" />
+                <marker date="1521922521303" expanded="true" signature="1758:1891" ph="insert into myapp_nbu_jobinfo... " />
+                <marker date="1521922521303" expanded="true" signature="2029:2163" ph="update myapp_nbu_jobinfo " />
+                <marker date="1521922521303" expanded="true" signature="2869:2920" ph="select disti... myapp_nbu_jobinfo" />
+                <marker date="1521922521303" expanded="true" signature="3165:3230" ph="select * fro... myapp_nbu_time" />
+                <marker date="1521922521303" expanded="true" signature="3366:3434" ph="insert into myapp_nbu_time... " />
+                <marker date="1521922521303" expanded="true" signature="3512:3578" ph="select * fro... myapp_nbu_daily" />
+                <marker date="1521922521303" expanded="true" signature="3717:3786" ph="insert into myapp_nbu_daily... " />
+                <marker date="1521922521303" expanded="true" signature="4068:4119" ph="select disti... myapp_nbu_jobinfo" />
+                <marker date="1521922521303" expanded="true" signature="4241:4297" ph="select time " />
+                <marker date="1521922521303" expanded="true" signature="4383:4475" ph="select start... myapp_nbu_jobinfo" />
+                <marker date="1521922521303" expanded="true" signature="4941:5021" ph="update myapp_nbu_time... " />
+                <marker date="1521922521303" expanded="true" signature="5090:5170" ph="update myapp_nbu_daily... " />
+                <marker date="1521922521303" expanded="true" signature="5538:5566" ph="delete from myapp_nbu_weekly... " />
+                <marker date="1521922521303" expanded="true" signature="5605:5656" ph="select disti... myapp_nbu_jobinfo" />
+                <marker date="1521922521303" expanded="true" signature="5777:5859" ph="select sum(C... myapp_nbu_daily" />
+                <marker date="1521922521303" expanded="true" signature="6082:6147" ph="select * fro... myapp_nbu_weekly" />
+                <marker date="1521922521303" expanded="true" signature="6286:6356" ph="insert into myapp_nbu_weekly... " />
+                <marker date="1521922521303" expanded="true" signature="6460:6532" ph="update myapp_nbu_weekly... " />
+                <marker date="1521922521303" expanded="true" signature="6591:6658" ph="select * fro... myapp_nbu_week_all" />
+                <marker date="1521922521303" expanded="true" signature="6824:6896" ph="insert into myapp_nbu_week_all... " />
+                <marker date="1521922521303" expanded="true" signature="7002:7076" ph="update myapp_nbu_week_all... " />
+                <marker date="1521922521303" expanded="true" signature="7426:7477" ph="select disti... myapp_nbu_jobinfo" />
+                <marker date="1521922521303" expanded="true" signature="7614:7698" ph="select sum(C... myapp_nbu_weekly" />
+                <marker date="1521922521303" expanded="true" signature="7862:7930" ph="select * fro... myapp_nbu_monthly" />
+                <marker date="1521922521303" expanded="true" signature="8054:8125" ph="insert into myapp_nbu_monthly... " />
+                <marker date="1521922521303" expanded="true" signature="8219:8294" ph="update myapp_nbu_monthly... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/myApp/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="474">
+              <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <folding>
+                <element signature="e#24#63#0" expanded="true" />
+                <marker date="1521921970981" expanded="true" signature="938:986" ph="select polic... myapp_nbu_time" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nbuview.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/myApp/nbuview.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="199">
+              <caret line="153" column="51" lean-forward="true" selection-start-line="153" selection-start-column="51" selection-end-line="153" selection-end-column="51" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -106,9 +159,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="HTML File" />
         <option value="Python Script" />
-        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -131,10 +184,21 @@
       <find>background-color</find>
       <find>table-header-group</find>
       <find>array_in_tem</find>
+      <find>刷新信息</find>
+      <find>8080</find>
+      <find>insert</find>
+      <find>HttpResponse</find>
+      <find>get/tabjson</find>
+      <find>ajax</find>
+      <find>get</find>
+      <find>post</find>
+      <find>start_time</find>
+      <find>json.load</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="UPDATE_TYPE" value="MERGE" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -150,7 +214,6 @@
         <option value="$PROJECT_DIR$/django_huawei/urls.py" />
         <option value="$PROJECT_DIR$/templates/myApp/pie-simple.html" />
         <option value="$PROJECT_DIR$/django_huawei/settings.py" />
-        <option value="$PROJECT_DIR$/templates/myApp/test.py" />
         <option value="$PROJECT_DIR$/templates/myApp/test001.py" />
         <option value="$PROJECT_DIR$/static/css/bootstrap-table.css" />
         <option value="$PROJECT_DIR$/templates/myApp/server.html" />
@@ -158,11 +221,27 @@
         <option value="$PROJECT_DIR$/static/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/templates/myApp/showrmis.html" />
         <option value="$PROJECT_DIR$/static/css/bootstrap-table-group-by.css" />
-        <option value="$PROJECT_DIR$/myApp/urls.py" />
-        <option value="$PROJECT_DIR$/static/css/mycss.css" />
-        <option value="$PROJECT_DIR$/myApp/views.py" />
+        <option value="$PROJECT_DIR$/templates/myApp/crontab.py" />
+        <option value="D:/huawei_manager-master/huawei_manager-master/crontab.py" />
+        <option value="$PROJECT_DIR$/myApp/crontab.py" />
+        <option value="$PROJECT_DIR$/myApp/array_info_collect.py" />
+        <option value="$PROJECT_DIR$/myApp/nbu_collect_info.py" />
+        <option value="$PROJECT_DIR$/templates/myApp/1.html" />
+        <option value="$PROJECT_DIR$/templates/nbuview.html" />
+        <option value="D:/remote_project/nbu_collect.py" />
+        <option value="$PROJECT_DIR$/templates/myApp/header.html" />
+        <option value="$PROJECT_DIR$/templates/myApp/nbuview_weekly.html" />
+        <option value="$PROJECT_DIR$/templates/myApp/nbuview_monthly.html" />
         <option value="$PROJECT_DIR$/templates/myApp/array.html" />
         <option value="$PROJECT_DIR$/templates/myApp/searcharray.html" />
+        <option value="$PROJECT_DIR$/templates/myApp/base.html" />
+        <option value="$PROJECT_DIR$/myApp/urls.py" />
+        <option value="$PROJECT_DIR$/templates/myApp/test.py" />
+        <option value="$PROJECT_DIR$/myApp/views.py" />
+        <option value="$PROJECT_DIR$/templates/myApp/inputarrayinfo.html" />
+        <option value="$PROJECT_DIR$/myApp/nbu_collect.py" />
+        <option value="$PROJECT_DIR$/static/css/mycss.css" />
+        <option value="$PROJECT_DIR$/templates/myApp/nbuview.html" />
       </list>
     </option>
   </component>
@@ -172,9 +251,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1373" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="533" />
+    <option name="y" value="164" />
+    <option name="width" value="1387" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -232,6 +312,13 @@
             <path>
               <item name="django_huawei" type="b2602c69:ProjectViewProjectNode" />
               <item name="django_huawei" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="theme" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="django_huawei" type="b2602c69:ProjectViewProjectNode" />
+              <item name="django_huawei" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -244,8 +331,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -253,17 +340,21 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="SearchEverywhereHistoryKey" value="CLASSPATH&#9;null&#9;null" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/js/theme" />
       <recent name="$PROJECT_DIR$/static/js" />
-      <recent name="$PROJECT_DIR$/templates/myApp" />
-      <recent name="$PROJECT_DIR$/static/fonts" />
-      <recent name="D:\django_huawei\static\css" />
-      <recent name="D:\django_huawei\static\js" />
+      <recent name="$PROJECT_DIR$/static" />
+      <recent name="D:\django_huawei\templates\myApp" />
+      <recent name="D:\django_huawei\myApp" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/js/theme/default" />
+      <recent name="D:\django_huawei\templates\myApp" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -278,27 +369,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Django server.django_huawei">
-    <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="django_huawei" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.nbu_collect (1)">
+    <configuration name="crontab" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -311,7 +383,64 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="django_huawei" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:\django_huawei\templates\myApp\test001.py" />
+      <option name="SCRIPT_NAME" value="D:\huawei_manager-master\huawei_manager-master\crontab.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="nbu_collect (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/myApp" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="django_huawei" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/myApp/nbu_collect.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="nbu_collect" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../remote_project" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="remote_project" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../remote_project/nbu_collect.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="nbu_collect_info" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/myApp" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="django_huawei" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/myApp/nbu_collect_info.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -324,32 +453,13 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/django_huawei" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="django_huawei" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/django_huawei/test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="test001" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/templates/myApp" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="django_huawei" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/templates/myApp/test001.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/templates/myApp/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -378,19 +488,21 @@
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
     </configuration>
-    <list size="5">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Django server.django_huawei" />
-      <item index="1" class="java.lang.String" itemvalue="Python.test" />
-      <item index="2" class="java.lang.String" itemvalue="Python.manage" />
-      <item index="3" class="java.lang.String" itemvalue="Python.test (1)" />
-      <item index="4" class="java.lang.String" itemvalue="Python.test001" />
+      <item index="1" class="java.lang.String" itemvalue="Python.crontab" />
+      <item index="2" class="java.lang.String" itemvalue="Python.nbu_collect_info" />
+      <item index="3" class="java.lang.String" itemvalue="Python.nbu_collect" />
+      <item index="4" class="java.lang.String" itemvalue="Python.test" />
+      <item index="5" class="java.lang.String" itemvalue="Python.nbu_collect (1)" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.test001" />
-        <item index="1" class="java.lang.String" itemvalue="Python.test (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.manage" />
-        <item index="3" class="java.lang.String" itemvalue="Python.test" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.nbu_collect (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Python.test" />
+        <item index="2" class="java.lang.String" itemvalue="Python.nbu_collect" />
+        <item index="3" class="java.lang.String" itemvalue="Python.nbu_collect_info" />
+        <item index="4" class="java.lang.String" itemvalue="Python.crontab" />
       </list>
     </recent_temporary>
   </component>
@@ -426,28 +538,28 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1373" height="877" extended-state="0" />
-    <editor active="true" />
+    <frame x="-9" y="23" width="1387" height="877" extended-state="6" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11214953" sideWeight="0.50216687" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39148495" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917964" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3517647" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917964" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20976116" sideWeight="0.49783316" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1813547" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20976116" sideWeight="0.49783316" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22855084" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279503" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997923" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35155278" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917964" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279503" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -464,71 +576,31 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/templates/myApp/inputarrayinfo.html</url>
+          <line>15</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/templates/myApp/test.py</url>
+          <line>33</line>
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="93" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/django_huawei/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2017.3/system/python_stubs/-762174762/__builtin__.py" />
-    <entry file="file://C:/Python27/Lib/site-packages/django/db/models/base.py" />
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="18" column="46" lean-forward="false" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myApp/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myApp/migrations/0001_initial.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="33" column="23" lean-forward="false" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/huawei_manager/array_info_collect.py" />
-    <entry file="file://C:/Python27/Lib/site-packages/django/utils/autoreload.py" />
-    <entry file="file://$PROJECT_DIR$/myApp/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="17" column="51" lean-forward="true" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html" />
-    <entry file="file://$PROJECT_DIR$/templates/myApp/pie-simple.html" />
-    <entry file="file://$PROJECT_DIR$/redi.json" />
-    <entry file="file://C:/Python27/Lib/site-packages/django/templatetags/static.py" />
-    <entry file="file://$PROJECT_DIR$/templates/myApp/redi.json" />
-    <entry file="file://$PROJECT_DIR$/myApp/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myApp/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-43">
-          <caret line="44" column="22" lean-forward="false" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/json/__init__.py" />
-    <entry file="file://C:/Python27/Lib/site-packages/django/http/response.py" />
     <entry file="file://$PROJECT_DIR$/django_huawei/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
@@ -537,21 +609,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="211" column="568" lean-forward="true" selection-start-line="211" selection-start-column="568" selection-end-line="211" selection-end-column="568" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/1.sql" />
     <entry file="file://$PROJECT_DIR$/static/js/bootstrap.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -559,17 +621,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/echarts.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -577,7 +628,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -591,43 +641,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/myApp/bootstrap4.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/myApp/bootstrap2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="60" column="39" lean-forward="true" selection-start-line="60" selection-start-column="39" selection-end-line="60" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/myApp/bootstrap.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1043">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/myApp/cssPdf.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="13" column="62" lean-forward="false" selection-start-line="13" selection-start-column="62" selection-end-line="13" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/myApp/bootstrap4.html" />
+    <entry file="file://$PROJECT_DIR$/templates/myApp/bootstrap2.html" />
+    <entry file="file://$PROJECT_DIR$/templates/myApp/bootstrap.html" />
+    <entry file="file://$PROJECT_DIR$/templates/myApp/cssPdf.html" />
     <entry file="file://$PROJECT_DIR$/static/js/mirza_fonts.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="278">
           <caret line="1" column="3012" lean-forward="true" selection-start-line="1" selection-start-column="3012" selection-end-line="1" selection-end-column="3012" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -635,35 +656,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="14" column="15" lean-forward="true" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/myApp/showrmis.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/myApp/test001.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="75" lean-forward="false" selection-start-line="9" selection-start-column="75" selection-end-line="9" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/myApp/test001.py" />
     <entry file="file://$PROJECT_DIR$/static/js/bootstrap-table.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="6" column="6423" lean-forward="false" selection-start-line="6" selection-start-column="6422" selection-end-line="6" selection-end-column="6423" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1520794364000" expanded="true" signature="9880:9892" ph="..." />
-            <marker date="1520794364000" expanded="true" signature="42526:42532" ph=" " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -671,11 +671,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="79" lean-forward="false" selection-start-line="0" selection-start-column="78" selection-end-line="0" selection-end-column="79" />
-          <folding>
-            <element signature="e#2002#2300#2" expanded="false" />
-            <element signature="e#2355#2598#2" expanded="false" />
-            <element signature="e#2654#2893#2" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -683,26 +678,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2457">
           <caret line="91" column="26" lean-forward="false" selection-start-line="91" selection-start-column="8" selection-end-line="91" selection-end-column="26" />
-          <folding>
-            <marker date="1520794364000" expanded="true" signature="901:908" ph="×" />
-            <marker date="1520794364000" expanded="true" signature="1214:1251" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/bootstrap-table-toolbar.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="15" lean-forward="true" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/bootstrap-table-toolbar.min.js" />
     <entry file="file://$PROJECT_DIR$/static/js/bootstrap-table-multiple-search.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1816">
           <caret line="11" column="42" lean-forward="false" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -710,7 +693,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -726,7 +708,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-6591">
           <caret line="45" column="19" lean-forward="false" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -734,7 +715,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4634">
           <caret line="499" column="21" lean-forward="false" selection-start-line="499" selection-start-column="21" selection-end-line="499" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -742,7 +722,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -754,73 +733,253 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myApp/urls.py">
+    <entry file="file://$PROJECT_DIR$/templates/myApp/index.html" />
+    <entry file="file://$PROJECT_DIR$/templates/myApp/array_management.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+        <state relative-caret-position="145">
+          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/myApp/index.html">
+    <entry file="file://D:/huawei_manager-master/huawei_manager-master/testxls.py" />
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+        <state relative-caret-position="358">
+          <caret line="1667" column="0" lean-forward="false" selection-start-line="1667" selection-start-column="0" selection-end-line="1667" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/huawei_manager-master/huawei_manager-master/crontab.py" />
+    <entry file="file://$PROJECT_DIR$/templates/myApp/1.html" />
+    <entry file="file://$PROJECT_DIR$/myApp/1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/echarts.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1380">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/remote_project/nbu_collect.py" />
+    <entry file="file://$PROJECT_DIR$/templates/myApp/nbuview_monthly.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2565">
+          <caret line="95" column="40" lean-forward="false" selection-start-line="95" selection-start-column="40" selection-end-line="95" selection-end-column="40" />
+          <folding>
+            <element signature="e#373#393#0#HTML" expanded="false" />
+            <element signature="e#969#1019#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/myApp/nbuview_weekly.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="59" lean-forward="true" selection-start-line="4" selection-start-column="59" selection-end-line="4" selection-end-column="59" />
+          <folding>
+            <element signature="e#379#399#0#HTML" expanded="false" />
+            <element signature="e#1000#1050#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myApp/crontab.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2484">
+          <caret line="99" column="24" lean-forward="true" selection-start-line="99" selection-start-column="24" selection-end-line="99" selection-end-column="24" />
+          <folding>
+            <marker date="1521445928106" expanded="true" signature="810:883" ph="select * fro... myapp_array_admin" />
+            <marker date="1521445928106" expanded="true" signature="4895:5081" ph="insert into myapp_array_history... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myApp/nbu_collect_info.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myApp/array_info_collect.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1341">
+          <caret line="268" column="43" lean-forward="true" selection-start-line="268" selection-start-column="43" selection-end-line="268" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/myApp/showrmis.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/myApp/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/myApp/array.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2430">
+          <caret line="90" column="32" lean-forward="false" selection-start-line="90" selection-start-column="32" selection-end-line="90" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/myApp/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="15" column="24" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="21" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myApp/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="22" column="28" lean-forward="true" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/myApp/inputarrayinfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="75" column="51" lean-forward="false" selection-start-line="75" selection-start-column="51" selection-end-line="75" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myApp/nbu_collect.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="104" column="72" lean-forward="false" selection-start-line="104" selection-start-column="72" selection-end-line="104" selection-end-column="72" />
+          <folding>
+            <element signature="e#24#33#0" expanded="true" />
+            <marker date="1521922521303" expanded="true" signature="1600:1654" ph="select count... myapp_nbu_jobinfo" />
+            <marker date="1521922521303" expanded="true" signature="1758:1891" ph="insert into myapp_nbu_jobinfo... " />
+            <marker date="1521922521303" expanded="true" signature="2029:2163" ph="update myapp_nbu_jobinfo " />
+            <marker date="1521922521303" expanded="true" signature="2869:2920" ph="select disti... myapp_nbu_jobinfo" />
+            <marker date="1521922521303" expanded="true" signature="3165:3230" ph="select * fro... myapp_nbu_time" />
+            <marker date="1521922521303" expanded="true" signature="3366:3434" ph="insert into myapp_nbu_time... " />
+            <marker date="1521922521303" expanded="true" signature="3512:3578" ph="select * fro... myapp_nbu_daily" />
+            <marker date="1521922521303" expanded="true" signature="3717:3786" ph="insert into myapp_nbu_daily... " />
+            <marker date="1521922521303" expanded="true" signature="4068:4119" ph="select disti... myapp_nbu_jobinfo" />
+            <marker date="1521922521303" expanded="true" signature="4241:4297" ph="select time " />
+            <marker date="1521922521303" expanded="true" signature="4383:4475" ph="select start... myapp_nbu_jobinfo" />
+            <marker date="1521922521303" expanded="true" signature="4941:5021" ph="update myapp_nbu_time... " />
+            <marker date="1521922521303" expanded="true" signature="5090:5170" ph="update myapp_nbu_daily... " />
+            <marker date="1521922521303" expanded="true" signature="5538:5566" ph="delete from myapp_nbu_weekly... " />
+            <marker date="1521922521303" expanded="true" signature="5605:5656" ph="select disti... myapp_nbu_jobinfo" />
+            <marker date="1521922521303" expanded="true" signature="5777:5859" ph="select sum(C... myapp_nbu_daily" />
+            <marker date="1521922521303" expanded="true" signature="6082:6147" ph="select * fro... myapp_nbu_weekly" />
+            <marker date="1521922521303" expanded="true" signature="6286:6356" ph="insert into myapp_nbu_weekly... " />
+            <marker date="1521922521303" expanded="true" signature="6460:6532" ph="update myapp_nbu_weekly... " />
+            <marker date="1521922521303" expanded="true" signature="6591:6658" ph="select * fro... myapp_nbu_week_all" />
+            <marker date="1521922521303" expanded="true" signature="6824:6896" ph="insert into myapp_nbu_week_all... " />
+            <marker date="1521922521303" expanded="true" signature="7002:7076" ph="update myapp_nbu_week_all... " />
+            <marker date="1521922521303" expanded="true" signature="7426:7477" ph="select disti... myapp_nbu_jobinfo" />
+            <marker date="1521922521303" expanded="true" signature="7614:7698" ph="select sum(C... myapp_nbu_weekly" />
+            <marker date="1521922521303" expanded="true" signature="7862:7930" ph="select * fro... myapp_nbu_monthly" />
+            <marker date="1521922521303" expanded="true" signature="8054:8125" ph="insert into myapp_nbu_monthly... " />
+            <marker date="1521922521303" expanded="true" signature="8219:8294" ph="update myapp_nbu_monthly... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myApp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="470" column="15" lean-forward="false" selection-start-line="470" selection-start-column="15" selection-end-line="470" selection-end-column="15" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+            <marker date="1521922328173" expanded="true" signature="890:911" ph="delete from myapp_lun... " />
+            <marker date="1521922328173" expanded="true" signature="943:967" ph="delete from myapp_server... " />
+            <marker date="1521922328173" expanded="true" signature="999:1022" ph="delete from myapp_array... " />
+            <marker date="1521922328173" expanded="true" signature="9198:9464" ph="SELECT t1.lu... myapp_lun" />
+            <marker date="1521922328173" expanded="true" signature="10847:10898" ph="select * fro... myapp_array_admin" />
+            <marker date="1521922328173" expanded="true" signature="10985:11079" ph="insert into myapp_array_admin... " />
+            <marker date="1521922328173" expanded="true" signature="11260:11356" ph="update myapp_array_admin... " />
+            <marker date="1521922328173" expanded="true" signature="12033:12084" ph="select disti... myapp_nbu_jobinfo" />
+            <marker date="1521922328173" expanded="true" signature="12369:12398" ph="select * fro... myapp_nbu_daily" />
+            <marker date="1521922328173" expanded="true" signature="12369:12422" ph="select * fro... myapp_nbu_daily" />
+            <marker date="1521922328173" expanded="true" signature="13016:13047" ph="select * fro... myapp_nbu_library" />
+            <marker date="1521922328173" expanded="true" signature="13654:13705" ph="select disti... myapp_nbu_jobinfo" />
+            <marker date="1521922328173" expanded="true" signature="14123:14195" ph="select * fro... myapp_nbu_week_all" />
+            <marker date="1521922328173" expanded="true" signature="14876:14907" ph="select * fro... myapp_nbu_library" />
+            <marker date="1521922328173" expanded="true" signature="15403:15454" ph="select disti... myapp_nbu_jobinfo" />
+            <marker date="1521922328173" expanded="true" signature="15875:15944" ph="select * fro... myapp_nbu_monthly" />
+            <marker date="1521922328173" expanded="true" signature="16625:16656" ph="select * fro... myapp_nbu_library" />
+            <marker date="1521922328173" expanded="true" signature="17407:17444" ph="select disti... myapp_nbu_jobinfo" />
+            <marker date="1521922328173" expanded="true" signature="17407:17449" ph="select polic... myapp_nbu_jobinfo" />
+            <marker date="1521922328173" expanded="true" signature="17407:17476" ph="select polic... myapp_nbu_jobinfo" />
+            <marker date="1521922328173" expanded="true" signature="17407:17505" ph="select polic... myapp_nbu_jobinfo" />
+            <marker date="1521922328173" expanded="true" signature="18267:18315" ph="select polic... myapp_nbu_time" />
+            <marker date="1521922328173" expanded="true" signature="18267:18333" ph="select polic... myapp_nbu_time" />
+            <marker date="1521922328173" expanded="true" signature="18267:18335" ph="select polic... myapp_nbu_time" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/myApp/searcharray.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/myApp/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+            <marker date="1521921970981" expanded="true" signature="938:986" ph="select polic... myapp_nbu_time" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/theme/mycss.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/css/mycss.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="567">
+          <caret line="21" column="65" lean-forward="false" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myApp/views.py">
+    <entry file="file://$PROJECT_DIR$/templates/myApp/nbuview.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="213" column="31" lean-forward="false" selection-start-line="213" selection-start-column="24" selection-end-line="213" selection-end-column="31" />
+        <state relative-caret-position="199">
+          <caret line="153" column="51" lean-forward="true" selection-start-line="153" selection-start-column="51" selection-end-line="153" selection-end-column="51" />
           <folding>
-            <marker date="1521228864930" expanded="true" signature="670:691" ph="delete from myapp_lun... " />
-            <marker date="1521228864930" expanded="true" signature="676:691" ph="delete from myapp_lun" />
-            <marker date="1521228864930" expanded="true" signature="723:747" ph="delete from myapp_server... " />
-            <marker date="1521228864930" expanded="true" signature="779:802" ph="delete from myapp_array... " />
-            <marker date="1521228864930" expanded="true" signature="8876:9130" ph="SELECT t1.lu... myapp_lun" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/myApp/array.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="53" column="123" lean-forward="false" selection-start-line="53" selection-start-column="123" selection-end-line="53" selection-end-column="123" />
-          <folding>
-            <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/myApp/array_management.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="709">
-          <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/myApp/searcharray.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="160" column="5" lean-forward="false" selection-start-line="160" selection-start-column="5" selection-end-line="160" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>

@@ -1,48 +1,5 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>山东分行集中存储管理平台</title>
-
-    <script src="{% static 'js/echarts.min.js' %}"></script>
-    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.js' %}"></script>
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
-    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-    <link href="{% static 'css/mycss.css' %}" rel="stylesheet">
-
-
-
-
-
-</head>
-<body>
-
-
-<nav class="navbar  navbar-fixed-top navba-no-bg navbar-inverse " style="background-color: #5e5e5e" role="navigation">
-    <div class="container" >
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="">GuanCong - Homepage</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="top-navbar-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a class="scroll-link" href="#">Top</a></li>
-                <li><a class="scroll-link" href="">磁盘机管理</a></li>
-                <li><a class="scroll-link" href="#">NBU管理</a></li>
-                <li><a class="scroll-link" href="#">About</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+{% extends "myApp/base.html" %}
+{% block content %}
 
 
 <div class="panel panel-default " style="border-style:none;margin-top: 70px;margin-right: 0px;margin-left: 10px; width:100%" >
@@ -55,7 +12,9 @@
 
                     <li ><a class="scroll-link" href="../inputarrayinfo"   style="font-size: 0.75em;font-family: 幼圆" >信息录入</a></li>
                     <li><a class="scroll-link" href="../initdb"  style="font-size: 0.75em;font-family: 幼圆" >信息更新</a></li>
-                    <li><a class="scroll-link" href=""  style="font-size: 0.75em;font-family: 幼圆" >表格导出</a></li>
+                    <li><a class="scroll-link" href="../exportexcel"  style="font-size: 0.75em;font-family: 幼圆" >表格导出</a></li>
+                    <li><a class="scroll-link" href=""  style="font-size: 0.75em;font-family: 幼圆" >时间趋势</a></li>
+
                 </ul>
             </div>
 
@@ -103,9 +62,9 @@
                                         textBorderColor:'#5e5e5e',
                                     },
                             subtext: '{{ eacharray.array_ip }}',
-                            link:"https://{{ eacharray.array_ip }}:8080", //这里有个绝对路径与相对路径的处理 绝对路径就是直接加上https即可
+                            link:"https://{{ eacharray.array_ip }}:8088", //这里有个绝对路径与相对路径的处理 绝对路径就是直接加上https即可
                             target:'blank',
-                            sublink:"https://{{ eacharray.array_ip }}:8080", //这里有个绝对路径与相对路径的处理 绝对路径就是直接加上https即可
+                            sublink:"https://{{ eacharray.array_ip }}:8088", //这里有个绝对路径与相对路径的处理 绝对路径就是直接加上https即可
                             subtarget:'blank',
                             subtextStyle:{
                                 align:"right",
@@ -151,23 +110,6 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
 </div>
 
-
-
-
-
-
-
-
-
-
-
-</body>
-</html>
+{% endblock %}

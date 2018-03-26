@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/django_huawei.iml" filepath="$PROJECT_DIR$/.idea/django_huawei.iml" />
+      <module fileurl="file://D:/huawei_manager-master/.idea/huawei_manager-master.iml" filepath="D:/huawei_manager-master/.idea/huawei_manager-master.iml" />
       <module fileurl="file://D:/huawei_manager/.idea/pythonenv.iml" filepath="D:/huawei_manager/.idea/pythonenv.iml" />
+      <module fileurl="file://D:/remote_project/.idea/remote_project.iml" filepath="D:/remote_project/.idea/remote_project.iml" />
     </modules>
   </component>
 </project>

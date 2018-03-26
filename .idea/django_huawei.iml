@@ -17,6 +17,8 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="pythonenv" />
     <orderEntry type="module" module-name="pythonenv" />
+    <orderEntry type="module" module-name="huawei_manager-master" />
+    <orderEntry type="module" module-name="remote_project" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Django" />

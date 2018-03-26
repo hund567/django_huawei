@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}集中存储管理平台{% endblock %}</title>
+    {% block css_js_base %}<!--css和js模块区域-->
+
+    <script src="{% static 'js/echarts.min.js' %}"></script>
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/mycss.css' %}" rel="stylesheet">
+
+    {% endblock %}
+
+</head>
+<body>
+{% include "myApp/header.html" %}<!--引入网页的头部模板-->
+
+            {% block content %}<!--自定义模板区域-->
+            {% endblock %}
+
+
+
+</body>
+</html>

@@ -4,14 +4,18 @@ from .models import Server,Array,Lun,Array_Admin
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import RequestContext
-
+from .array_info_collect import init_excel
+from .array_info_collect import func
+from .crontab import obtain_his_info
+from django.http import HttpResponseRedirect
 import requests
-import urllib, urllib2, json
+import urllib, urllib2
 import cookielib
 import ssl
 import pymysql
-import sys,shelve
 import json
+import datetime
+import time
 
 # Create your views here.
 def index(request):
@@ -32,20 +36,19 @@ def initdb(request):
     cursor.execute(
         "delete from myapp_array")
     conn.commit()
-    Arrays_list=[]
-    querys = (x for x in Array_Admin.objects.all())
-    for query in querys:
-        Arrays_list.append(query)
     cursor.close()
     conn.close()
 
+    Arrays_list = []
+    for query in Array_Admin.objects.all():
+        Arrays_list.append(query)
 
 
-    Arrays_list = [['93.1.243.31', '2102350BVB10H8000046', 'admin', 'Admin@storage'],
-                   ['93.1.243.25', '2102350HYS10H8000042', 'admin', 'Admin@storage'],
-                   ['93.1.243.63', '2102350DJX10G8000002', 'admin', 'Admin@storage'],
-                   ['93.1.243.61', '2102350BVB10F6000042', 'admin', 'Admin@storage'],
-                   ['93.225.115.54', '2102350BVB10F6000041', 'admin', 'admin@Storage']]
+    # Arrays_list = [['93.1.243.31', '2102350BVB10H8000046', 'admin', 'Admin@storage'],
+    #                ['93.1.243.25', '2102350HYS10H8000042', 'admin', 'Admin@storage'],
+    #                ['93.1.243.63', '2102350DJX10G8000002', 'admin', 'Admin@storage'],
+    #                ['93.1.243.61', '2102350BVB10F6000042', 'admin', 'Admin@storage'],
+    #                ['93.225.115.54', '2102350BVB10F6000041', 'admin', 'admin@Storage']]
     Arrays_group_dict = {}
     all_info = []
 
@@ -205,8 +208,11 @@ def initdb(request):
 
     for each_array in Arrays_list:
         #array_ip, array_id, array_user, array_passwd
-        func(each_array[0],each_array[1],each_array[2],each_array[3])
-    return render(request,'myApp/array.html')
+        func(each_array.array_ip,each_array.array_id,each_array.array_user,each_array.array_password)
+
+    return HttpResponseRedirect("../array")
+
+
 
 
 def array(request):
@@ -236,7 +242,7 @@ def getjson(request):
     conn = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd='root', db='managedb', charset='utf8')
     cursor = conn.cursor()
     cursor.execute(
-        "SELECT t1.lun_id,t1.lun_NAME,t1.lun_CAPACITY,t1.lun_WWN,t2.server_ID,t2.server_name,t2.server_IP,t2.server_wwn,t3.array_name,t3.location,t3.array_ip FROM myapp_lun t1,myapp_server t2,myapp_array t3 WHERE t1.server_ID_id = t2.id AND t2.array_id_id = t3.id ")
+        "SELECT t1.lun_id,t1.lun_NAME,t1.lun_CAPACITY,t1.lun_WWN,t2.server_ID,t2.server_name,t2.server_IP,t2.server_wwn,t3.array_name,t3.location,t3.array_ip,t3.array_id FROM myapp_lun t1,myapp_server t2,myapp_array t3 WHERE t1.server_ID_id = t2.id AND t2.array_id_id = t3.id ")
     effect_lun_row = cursor.fetchall()
     conn.close()
     resdict = {}
@@ -259,6 +265,7 @@ def getjson(request):
         rowdict['array_name'] = row[8]
         rowdict['location'] = row[9]
         rowdict['array_ip'] = row[10]
+        rowdict['array_id'] = row[11]
         rowlist.append(rowdict)
     resdict['total'] = len(rowlist)
     resdict['data'] = rowlist
@@ -294,3 +301,175 @@ def submit_array_info(request):
 
 
 #表单导出
+def exportexcel(request):
+    Arrays_list = obtain_his_info()
+    for each_array in Arrays_list:
+        Arrays_group_dict = func(each_array[0],each_array[1],each_array[2],each_array[3])
+    init_excel(Arrays_group_dict)
+    return HttpResponseRedirect("../array")
+
+
+def nbuview(request):
+   conn = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd='root', db='managedb', charset='utf8')
+   cursor = conn.cursor()
+   #日表生成
+   cursor.execute("select distinct storage_unit from myapp_nbu_jobinfo")
+   tuple_of_storage_unit = cursor.fetchall()
+   datedict = {}
+   valuedict = {}
+   datedict_weekly = {}
+   valuedict_weekly = {}
+   datedict_monthly = {}
+   valuedict_monthly = {}
+
+   for each_unit in tuple_of_storage_unit:
+       if each_unit[0] != ' ':
+           cursor.execute("select * from myapp_nbu_daily where storage_unit = %s",(each_unit[0]))
+           count_today = cursor.fetchall()
+           list_daily = []
+           dateList = []
+           valueList = []
+           for each in count_today:
+               list = []
+               a = each[0].strftime("%H:%M:%S")
+               list.append(a)
+               list.append(each[1])
+               list_daily.append(list)
+               dateList.append(a)
+               valueList.append(each[1])
+               b=each_unit[0].encode('utf-8')
+           datedict[b] = dateList
+           valuedict[b] = valueList
+        #获取磁带库与storage_unit关系
+
+   cursor.execute("select * from myapp_nbu_library")
+   library_dict={}
+   L = cursor.fetchall()
+   for each in L:
+       m = each[1].encode('utf-8')
+       library_dict[m] = each[0].encode('utf-8')
+
+   return render(request, 'myApp/nbuview.html',{"dateList":datedict,"valueList":valuedict,"dateList_weekly":datedict_weekly,"valueList_weekly":valuedict_weekly,"dateList_monthly":datedict_monthly,"valueList_monthly":valuedict_monthly,"library_dict":library_dict})
+
+
+
+
+
+def nbuview_weekly(request):
+   conn = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd='root', db='managedb', charset='utf8')
+   cursor = conn.cursor()
+   cursor.execute("select distinct storage_unit from myapp_nbu_jobinfo")
+   tuple_of_storage_unit = cursor.fetchall()
+   datedict_weekly = {}
+   valuedict_weekly = {}
+   for each_unit in tuple_of_storage_unit:
+       if each_unit[0] != ' ':
+        #周报生成
+           time_begin = datetime.date.today()
+           time_stamp = time.mktime(time_begin.timetuple()) - 604800
+           time_to_insert = time.strftime("%Y/%m/%d %H:%M:%S", time.localtime(time_stamp))
+           cursor.execute("select * from myapp_nbu_week_all WHERE  time >= %s and storage_unit = %s",(time_to_insert,each_unit[0]))
+           count_week = cursor.fetchall()
+           list_weekly = []
+           dateList_weekly = []
+           valueList_weekly = []
+           for each in count_week:
+               list = []
+               a = each[0].strftime("%Y/%m/%d \n %H:%M:%S")
+               list.append(a)
+               list.append(each[1])
+               list_weekly.append(list)
+               dateList_weekly.append(a)
+               valueList_weekly.append(each[1])
+               b = each_unit[0].encode('utf-8')
+
+           datedict_weekly[b] = dateList_weekly
+           valuedict_weekly[b] = valueList_weekly
+
+        #获取磁带库与storage_unit关系
+
+   cursor.execute("select * from myapp_nbu_library")
+   library_dict={}
+   L = cursor.fetchall()
+   for each in L:
+       m = each[1].encode('utf-8')
+       library_dict[m] = each[0].encode('utf-8')
+
+   return render(request, 'myApp/nbuview_weekly.html',{"dateList_weekly":datedict_weekly,"valueList_weekly":valuedict_weekly,"library_dict":library_dict})
+
+
+def nbuview_monthly(request):
+   conn = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd='root', db='managedb', charset='utf8')
+   cursor = conn.cursor()
+   cursor.execute("select distinct storage_unit from myapp_nbu_jobinfo")
+   tuple_of_storage_unit = cursor.fetchall()
+   datedict_monthly = {}
+   valuedict_monthly = {}
+
+   for each_unit in tuple_of_storage_unit:
+       if each_unit[0] != ' ':
+        #月表生成
+           time_begin = datetime.date.today()
+           time_stamp = time.mktime(time_begin.timetuple()) - 259200
+           time_to_insert = time.strftime("%Y/%m/%d %H:%M:%S", time.localtime(time_stamp))
+           cursor.execute("select * from myapp_nbu_monthly where time > %s and storage_unit = %s",(time_to_insert,each_unit[0]))
+           count_today = cursor.fetchall()
+           list_monthly = []
+           dateList_monthly = []
+           valueList_monthly = []
+           for each in count_today:
+               list = []
+               a = each[0].strftime("%Y/%m/%d")
+               list.append(a)
+               list.append(each[1])
+               list_monthly.append(list)
+               dateList_monthly.append(a)
+               valueList_monthly.append(each[1])
+               b = each_unit[0].encode('utf-8')
+           datedict_monthly[b] = dateList_monthly
+           valuedict_monthly[b] = valueList_monthly
+
+
+        #获取磁带库与storage_unit关系
+
+   cursor.execute("select * from myapp_nbu_library")
+   library_dict={}
+   L = cursor.fetchall()
+   for each in L:
+       m = each[1].encode('utf-8')
+       library_dict[m] = each[0].encode('utf-8')
+
+   return render(request, 'myApp/nbuview_monthly.html',{"dateList_monthly":datedict_monthly,"valueList_monthly":valuedict_monthly,"library_dict":library_dict})
+def getecharts(request,postinfo):
+    #先拼接时间
+    time_begin = datetime.date.today()
+    time_stamp = time.mktime(time_begin.timetuple()) - 86400 + time.mktime(postinfo[0].timetuple())
+    time_to_insert = time.strftime("%Y/%m/%d %H:%M:%S", time.localtime(time_stamp))
+    conn = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd='root', db='managedb', charset='utf8')
+    cursor = conn.cursor()
+    # 查询数据
+    cursor.execute("select policy from myapp_nbu_jobinfo WHERE storage_unit=%s and start_time <= %s and end_time >= %s",(postinfo[1],time_to_insert,time_to_insert))
+    lists_of_policys = cursor.fetchall()
+
+    return render(request, 'myApp/nbuview.html',{"lists_of_policys":lists_of_policys})
+
+def getpolicy_from_db(request):
+    #先把时间串拼起来
+    data = json.load(request)
+    #先将时间化为时间戳
+    a= data['time_to_search']
+    a= str(a)
+    b = a.split(':')
+    s = int(b[0])*3600 + int(b[1])*60 + int(b[2])
+    time_begin = datetime.date.today()
+    time_stamp = time.mktime(time_begin.timetuple()) - 86400*3 + s #这里别忘了后期改一下
+    c = int(time_stamp)
+    time_to_insert = time.strftime("%Y/%m/%d %H:%M:%S", time.localtime(c))
+    conn = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd='root', db='managedb', charset='utf8')
+    cursor = conn.cursor()
+    cursor.execute("select policy  from myapp_nbu_time where time=%s and storage_unit=%s",(time_to_insert,data['storage_unit']))
+    policy_dict = cursor.fetchall()
+    conn.close()
+
+    from django.http import JsonResponse
+    return JsonResponse(policy_dict,safe=False)

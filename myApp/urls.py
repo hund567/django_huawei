@@ -15,6 +15,12 @@ urlpatterns = [
     url(r'^initdb/$',views.initdb),
     url(r'^inputarrayinfo/$',views.inputarrayinfo),
     url(r'^submit_array_info$',views.submit_array_info),
+    url(r'^exportexcel/$',views.exportexcel),
+    url(r'^nbuview/$',views.nbuview),
+    url(r'^nbuview_weekly/$',views.nbuview_weekly),
+    url(r'^nbuview_monthly/$',views.nbuview_monthly),
+    url(r'^getecharts/$',views.getecharts),
+    url(r'^getpolicy_from_db$',views.getpolicy_from_db),
 
 
 ]

@@ -1,0 +1,190 @@
+{% extends "myApp/base.html" %}
+{% block content %}
+{% load static %}
+<script src="{% static 'js/layer.js' %}"></script>
+
+<div class="container-fluid  " style="border-style:none;margin-top: 70px;margin-right: -10px;margin-left: -10px; " >
+{#   <div id="" class="row" style="height: 100%;">#}
+
+       <div class="col-md-1 col-lg-1 col-sm-1 " style="height: 100%" >
+                <ul class="nav nav-pills nav-stacked clearfix" style="width:100%; ">
+
+                    <li class="active"><a  href="../nbuview" style="font-size: 0.75pc;font-family: 幼圆;width:100%">日视图</a></li>
+                    <li ><a  href="../nbuview_weekly" style="font-size: 0.75pc;font-family: 幼圆;width:100%">周视图</a></li>
+                    <li ><a  href="../nbuview_monthly" style="font-size: 0.75pc;font-family: 幼圆;width:100%">月视图</a></li>
+
+                </ul>
+       </div>
+        {% for key in  dateList%}
+       <div class="col-md-12 col-lg-12 col-sm-12" id="{{ key }}" style="margin-right: 0px;height: 26em; width:80em">
+
+
+
+            <script type="text/javascript">
+           var dom = document.getElementById("{{ key }}");
+           var myChart = echarts.init(dom);
+           var app = {};
+  {#这里及其重要  加上|safe防止&#39 等ascii的转义 ！！！#}
+
+           var dateList = {{ dateList|safe }}[{{ key }}]
+           var valueList = {{ valueList|safe }}[{{ key }}]
+           var library_name = {{ library_dict|safe }}[{{ key }}]
+           option = {
+
+                        // Make gradient line here
+                        visualMap: [{
+                            show: false,
+                            type: 'continuous',
+                            seriesIndex: 0,
+                            min: 0,
+                            max: dateList.length - 1,
+                            color:['pink','orange'],
+
+                        }],
+                        toolbox: {
+                                    show: true,
+                                    right:'10%',
+                                    feature: {
+                                        dataZoom: {
+                                            yAxisIndex: 'none'
+                                        },
+                                        dataView: {readOnly: false},
+                                        magicType: {type: ['line', 'bar']},
+                                        restore: {},
+                                        saveAsImage: {}
+                                    }
+                                },
+
+
+
+                        title: [{
+                            left: 'center',
+                            text: library_name
+                        }],
+                        tooltip: {
+                            trigger: 'axis',
+                            tooltip : {
+                                            trigger: 'axis',
+
+                                        },
+
+
+                        },
+                        xAxis: [{
+                            data: dateList
+                        }],
+                        yAxis: [{
+                            splitLine: {show: false},
+                            name:'备份作业并发量'
+                        }],
+
+                        series: [{
+                            type: 'line',
+                            showSymbol: false,
+                            data: valueList,
+                            markLine:{
+                                data:[{
+                                    name:"磁带机总数",
+                                    yAxis:12,
+                                    value:50,
+                                      }],
+                                label:{
+                                    show:true,
+                                    position:'start'
+
+                                },
+                                lineStyle:[
+                                    {type:'dotted'}
+                                ]
+                                     }
+
+                        }]
+                    };
+           myChart.setOption(option, true);
+           myChart.on('click',function(params){
+
+                            //  前台传递crsf至后台  在使用ajax和post方法时需加入这一段
+                                        jQuery(document).ajaxSend(function(event, xhr, settings) {
+                                        function getCookie(name) {
+                                            var cookieValue = null;
+                                            if (document.cookie && document.cookie != '') {
+                                                var cookies = document.cookie.split(';');
+                                                for (var i = 0; i < cookies.length; i++) {
+                                                    var cookie = jQuery.trim(cookies[i]);
+                                                    // Does this cookie string begin with the name we want?
+                                                    if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                                                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                                                        break;
+                                                    }
+                                                }
+                                            }
+                                            return cookieValue;
+                                        }
+                                        function sameOrigin(url) {
+                                            // url could be relative or scheme relative or absolute
+                                            var host = document.location.host; // host + port
+                                            var protocol = document.location.protocol;
+                                            var sr_origin = '//' + host;
+                                            var origin = protocol + sr_origin;
+                                            // Allow absolute or scheme relative URLs to same origin
+                                            return (url == origin || url.slice(0, origin.length + 1) == origin + '/') ||
+                                                (url == sr_origin || url.slice(0, sr_origin.length + 1) == sr_origin + '/') ||
+                                                // or any other URL that isn't scheme relative or absolute i.e relative.
+                                                !(/^(\/\/|http:|https:).*/.test(url));
+                                        }
+                                        function safeMethod(method) {
+                                            return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+                                        }
+
+                                        if (!safeMethod(settings.type) && sameOrigin(settings.url)) {
+                                            xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));
+                                        }
+                                    });
+                                var aa = params.name
+                                 $.ajax({
+                                    //几个参数需要注意一下
+                                        type: "POST",//方法类型
+                                        {#dataType: "text",//预期服务器返回的数据类型#}
+                                        data: JSON.stringify({
+                                                    time_to_search:aa,
+                                                    storage_unit:{{ key }}
+                                                            }),
+                                        url: "../getpolicy_from_db",
+                                        contentType: "application/json; charset=utf-8",
+                                        success: function (resp) {
+
+                                            alert(resp)
+
+
+                                            console.log(resp);//打印服务端返回的数据(调试用)
+                                                                            if (resp.resultCode == 200) {
+                                                                                alert("SUCCESS");};
+
+                                                                    },
+                                                                                     error : function(resp) {
+
+                                                                                                    alert(resp);}
+                                                                    });
+
+
+
+
+
+
+
+
+
+
+
+           })
+       </script>
+       {% endfor %}
+       </div>
+
+   </div>
+
+
+{#</div>#}
+</div>
+
+{% endblock %}

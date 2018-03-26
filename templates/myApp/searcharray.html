@@ -20,8 +20,23 @@
 <script src="{% static 'js/tableExport.min.js' %}"></script>
 <script src="{% static 'js/bootstrap-table-toolbar.js' %}"></script>
 <script src="{% static 'js/bootstrap-table-multiple-search.js' %}"></script>
+<script>
+                function  getAjaxData() {
+                    var defer = $.Deferred();
+                    $.ajax({
+                        type: "get",
+                        async: false,
+                        url: '../initdb',
+                        success: function (msg) {
+                            //数据成功返回时执行次回调函数
+                            alert('更新数据成功');
+                        }
+                    });
+
+                }
 
 
+</script>
 
 
 
@@ -49,7 +64,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a class="scroll-link" href="#">Top</a></li>
                 <li ><a class="scroll-link" href="../array" >磁盘机管理</a></li>
-                <li><a class="scroll-link" href="#">NBU管理</a></li>
+                <li><a class="scroll-link" href="../nbuview">NBU管理</a></li>
                 <li><a class="scroll-link" href="#">About</a></li>
             </ul>
         </div>
@@ -74,9 +89,9 @@
 
                 </ul>
             </div>
-                <div class="col-md-11 col-lg-11 col-sm-11" align="right" style="height: 60px">
+                <div class="col-md-11 col-lg-11 col-sm-11" style="height: 60px">
                 <div id="toolbar">
-                    <button id="refresh_btn" type="button"  class="btn btn-success" onclick="refresh()">刷新信息
+                    <button id="refresh_btn" type="button"  class="btn btn-success" onclick="getAjaxData()">刷新信息
                     </button>
                     <button type="button" class="btn btn-info" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?" data-loading-text="loading...">导出全量数据
                     </button>
@@ -84,19 +99,7 @@
 
                 <div id="reportTableDiv" >
                 <table id="reportTable" data-toolbar="#toolbar" data-show-export="true"  data-toggle="reportTable"></table>
-                <script>
-                function  refresh() {
-                    $.ajax({
-                    type : "get",
-                    url: '../initdb',
-                     success: function (msg) {
-                         //数据成功返回时执行次回调函数
-                         alert('更新数据成功');
-                     }
-                        });
 
-                                    }
-                 </script>
 
                 <script type="text/javascript">
     $(function () {
@@ -140,8 +143,8 @@
 
             columns: [
                 {field: "checked", checkbox : true},
-                {field: "array_name", title: "归属磁盘机名", align: "center", valign: "middle",sortable: "true",
-                    },
+                {field: "array_name", title: "归属磁盘机名", align: "center", valign: "middle",sortable: "true"},
+                {field: "array_id", title: "磁盘机ID", align: "center", valign: "middle",sortable: "true"},
                 {field: "location", title: "盘机位置", align: "center", valign: "middle", sortable: "true",
                     formatter: function (value) {
                     if (value =="主机房")

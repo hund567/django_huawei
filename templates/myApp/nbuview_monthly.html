@@ -1,0 +1,103 @@
+{% extends "myApp/base.html" %}
+{% block content %}
+<div class="container-fluid  " style="border-style:none;margin-top: 70px;margin-right: -10px;margin-left: -10px; " >
+    <div id="" class="row" style="height: 100%;">
+               <div class="col-md-1 col-lg-1 col-sm-1 " style="height: 100%" >
+                            <ul class="nav nav-pills nav-stacked clearfix" style="width:100%; ">
+
+                                <li ><a  href="../nbuview" style="font-size: 0.75pc;font-family: 幼圆;width:100%">日视图</a></li>
+                                <li ><a  href="../nbuview_weekly" style="font-size: 0.75pc;font-family: 幼圆;width:100%">周视图</a></li>
+                                <li class="active"><a  href="../nbuview_monthly" style="font-size: 0.75pc;font-family: 幼圆;width:100%">月视图</a></li>
+
+                            </ul>
+               </div>
+{% for key in  dateList_monthly%}
+                    <div class="col-md-10 col-lg-10 col-sm-10" id="{{ key }}" style="margin-right: 0px;height: 26em; width:100%">
+                            <script type="text/javascript">
+                                       var dom = document.getElementById("{{ key }}");
+                                       var myChart = echarts.init(dom);
+                                       var app = {};
+                              {#这里及其重要  加上|safe防止&#39 等ascii的转义 ！！！#}
+                                       var dateList_weekly = {{ dateList_monthly|safe }}[{{ key }}]
+                                       var valueList_weekly = {{ valueList_monthly|safe }}[{{ key }}]
+                                       var library_name = {{ library_dict|safe }}[{{ key }}]
+                                       option = {
+
+                                                    // Make gradient line here
+                                                    visualMap: [{
+                                                        show: false,
+                                                        type: 'continuous',
+                                                        seriesIndex: 0,
+                                                        min: 0,
+                                                        max: dateList_weekly.length - 1,
+                                                        color:['pink','green']
+                                                    }],
+                                                    toolbox: {
+                                                                show: true,
+                                                                right:'10%',
+                                                                feature: {
+                                                                    dataZoom: {
+                                                                        yAxisIndex: 'none'
+                                                                    },
+                                                                    dataView: {readOnly: false},
+                                                                    magicType: {type: ['line', 'bar']},
+                                                                    restore: {},
+                                                                    saveAsImage: {}
+                                                                }
+                                                            },
+
+                                                    title: [{
+                                                        left: 'center',
+                                                        text: library_name
+                                                    }],
+                                                    tooltip: {
+                                                        trigger: 'axis'
+                                                    },
+                                                    xAxis: [{
+                                                        data: dateList_weekly
+                                                    }],
+                                                    yAxis: [{
+                                                        splitLine: {show: false},
+                                                        name:'备份作业并发量'
+                                                    }],
+
+                                                    series: [{
+                                                        type: 'line',
+                                                        showSymbol: false,
+                                                        data: valueList_weekly,
+                                                        markLine:{
+                                                            data:[{
+                                                                name:"磁带机总数",
+                                                                yAxis:12,
+                                                                value:50,
+                                                                  }],
+                                                            label:{
+                                                                show:true,
+                                                                position:'start'
+
+                                                            },
+                                                            lineStyle:[
+                                                                {type:'dotted'}
+                                                            ]
+                                                                 }
+                                                    }]
+                                                };
+                                       myChart.setOption(option, true);
+       </script>
+       </div>
+
+
+
+
+
+
+
+    </div>
+                            {% endfor %}
+
+
+    </div>
+</div>
+
+
+{% endblock %}

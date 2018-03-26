@@ -12,3 +12,11 @@
 .row{
 margin:0
 }
+/*body .layerclass{*/
+    /*background-color:#009688;*/
+    /*border: none;*/
+
+/*}*/
+
+body .layerclass.layui-layer-content{border: none;text-align: right;background-color:#5FB878;}
+body .layui-layer-dialog .layui-layer-content{line-height: 86px;}

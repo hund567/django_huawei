@@ -1,0 +1,21 @@
+
+.radius_corner{
+    /*padding:10px; width:300px; height:50px;*/
+    /*-moz-border-radius: 15px;*/
+    /*-webkit-border-radius: 15px;*/
+    border-radius:5px;
+}
+.container{
+    padding-left:0px;
+    padding-right:0px
+}
+.row{
+margin:0
+}
+body .layerclass{
+    background-color:#5FB878
+}
+body .layerclass .layui-layer-title{background:#c00; color:#fff; border: none;}
+body .layerclass .layui-layer-btn{border-top:1px solid #E9E7E7}
+body .layerclass .layui-layer-btn a{background:#333;}
+body .layerclass .layui-layer-btn .layui-layer-btn1{background:#999;}
